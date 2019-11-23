@@ -1,17 +1,11 @@
 // Hoang Hai Ha
-package Student
+package main
 
 import (
+	"github.com/81300988/GolangNordic/type_system/student"
 	"encoding/json"
 	"fmt"
 )
-
-type Student struct {
-	FirstName string `json:"first_name" bson:"full_name" validate:"required"`
-	LastName  string `json:"last_name" bson:"full_name" validate:"required"`
-	Age       int
-	ClassName string `json:"class_name"`
-}
 
 func main() {
 	dataJson := `[
