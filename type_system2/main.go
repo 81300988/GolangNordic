@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/81300988/GolangNordic/type_system/student"
+	model "github.com/81300988/GolangNordic/type_system/student"
 	"encoding/json"
 	"fmt"
 )
@@ -13,7 +13,7 @@ func main() {
 		{"first_name": "Anh", "last_name": "Dinh", "age":200, "class_name":"golang"}
 		]`
 
-	var arrStudent []Student
+	var arrStudent []model.Student
 	_ = json.Unmarshal([]byte(dataJson), &arrStudent)
 	fmt.Println(arrStudent)
 
