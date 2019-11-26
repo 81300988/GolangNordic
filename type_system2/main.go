@@ -2,9 +2,9 @@
 package main
 
 import (
-	"github.com/81300988/GolangNordic/tree/master/type_system/sutdent"
 	"encoding/json"
 	"fmt"
+	student "github.com/81300988/GolangNordic/type_system/sutdent"
 )
 
 func main() {
@@ -12,9 +12,12 @@ func main() {
 		{"first_name": "Victor", "last_name": "Nguyen", "age": 100, "class_name":"golang"},
 		{"first_name": "Anh", "last_name": "Dinh", "age":200, "class_name":"golang"}
 		]`
+	aString := "hello world"
 
-	var arrStudent []Student
+	bs := []byte(aString)
+	var arrStudent []student.Student
 	_ = json.Unmarshal([]byte(dataJson), &arrStudent)
 	fmt.Println(arrStudent)
+	fmt.Print(bs)
 
 }
